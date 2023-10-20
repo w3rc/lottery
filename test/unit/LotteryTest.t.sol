@@ -57,7 +57,7 @@ contract LotteryTest is Test {
     function testPleyersListUpdatedWhenNewPlayerEnters() public {
         vm.prank(PLAYER);
         lottery.enterLottery{value: entryFee}();
-        address playerAdded = lottery.getPlayer(0);
+        address playerAdded = lottery.getPlayerAddressFromIndex(0);
         assertEq(playerAdded, PLAYER);
     }
 

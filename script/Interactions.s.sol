@@ -17,7 +17,7 @@ contract CreateSubscription is Script {
             ,
             ,
             ,
-            address linkAddress,
+            ,
             uint256 deployerKey
         ) = helperConfig.activeNetworkConfig();
         return createSubscription(vrfCoordinator, deployerKey);
@@ -44,7 +44,7 @@ contract CreateSubscription is Script {
 }
 
 contract FundSubscription is Script {
-    uint96 public constant FUND_AMOUNT = 0.03 ether;
+    uint96 public constant FUND_AMOUNT = 5 ether;
 
     function fundSubscriptionUsingConfig() public {
         HelperConfig helperConfig = new HelperConfig();
